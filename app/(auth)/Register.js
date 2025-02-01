@@ -25,7 +25,7 @@ const Register = ({ navigation }) => {
                 return;
             }
 
-            const {data}= await axios.post('http://192.168.1.12:8080/api/v1/auth/register',{name,email,password});
+            const {data}= await axios.post('http://localhost:8080/api/v1/auth/register',{name,email,password});
             console.log('Register Data ==>', { name, email, password });
 
             // Show snackbar for 5 seconds after successful registration
