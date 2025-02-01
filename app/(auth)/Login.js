@@ -27,7 +27,7 @@ const Login = ({navigation}) => {
             setLoading(false);
             return;
         }
-        const {data}= await axios.post('http://192.168.1.12:8080/api/v1/auth/login',{email,password});
+        const {data}= await axios.post('http://localhost:8080/api/v1/auth/login',{email,password});
         setState(data);
         await AsyncStorage.setItem('@auth', JSON.stringify(data)); //Storing user data locally for later use
         console.log('Login Data ==>', {email, password});
